@@ -16,10 +16,8 @@ public class TicketController {
         if (ticket.getTitle() == null || ticket.getDescription() == null) {
             throw new RuntimeException("Invalid input");
         }
-
         ticket.setId(idCounter++);
         tickets.add(ticket);
-
         return ticket;
     }
     @GetMapping
